@@ -113,7 +113,7 @@ func isAdministratorLoggedIn() bool {
 // 使用 60 秒倒计时，给用户一个保存工作的机会
 func doShutdown() {
 	cmd := exec.Command("shutdown", "/s", "/t", "60", "/c",
-		"【ShutdownGuard】当前处于限制使用时间段（21:00 - 11:00），电脑将在 60 秒后关机。")
+		"当前处于限制使用时间段（21:00 - 11:00），电脑将在 60 秒后关机。")
 	err := cmd.Run()
 	if err != nil {
 		log.Printf("执行关机命令失败: %v", err)

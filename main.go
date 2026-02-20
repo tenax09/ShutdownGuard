@@ -11,8 +11,8 @@ import (
 )
 
 const serviceName = "ShutdownGuard"
-const serviceDisplayName = "ShutdownGuard 自动关机服务"
-const serviceDesc = "自动关机服务：晚上9点到早上11点期间自动关机"
+const serviceDisplayName = "自动定时服务"
+const serviceDesc = "自动服务：晚上9点到早上11点期间自动关机"
 
 func main() {
 	// 判断是否以 Windows 服务方式运行
@@ -56,7 +56,7 @@ func main() {
 }
 
 func usage() {
-	fmt.Fprintf(os.Stderr, "ShutdownGuard - 自动关机服务（21:00 ~ 次日 11:00）\n\n")
+	fmt.Fprintf(os.Stderr, "自动关机服务（21:00 ~ 次日 11:00）\n\n")
 	fmt.Fprintf(os.Stderr, "用法: %s <命令>\n\n", os.Args[0])
 	fmt.Fprintf(os.Stderr, "可用命令:\n")
 	fmt.Fprintf(os.Stderr, "  install   - 安装为 Windows 服务（开机自启）\n")

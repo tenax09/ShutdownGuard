@@ -84,7 +84,7 @@ func getActiveUsers() []string {
 	lines := strings.Split(string(output), "\n")
 	for _, line := range lines[1:] { // 跳过标题行
 		// 只关心 Active 状态的会话
-		if !strings.Contains(line, "Active") && !strings.Contains(line, "运行中") {
+		if !strings.Contains(line, "Active") || !strings.Contains(line, "运行中") {
 			continue
 		}
 		line = strings.TrimSpace(line)

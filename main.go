@@ -42,9 +42,6 @@ func main() {
 		err = startService()
 	case "stop":
 		err = stopService()
-	case "debug":
-		runDebug()
-		return
 	default:
 		usage()
 		return
@@ -63,7 +60,6 @@ func usage() {
 	fmt.Fprintf(os.Stderr, "  uninstall - 卸载服务\n")
 	fmt.Fprintf(os.Stderr, "  start     - 启动服务\n")
 	fmt.Fprintf(os.Stderr, "  stop      - 停止服务\n")
-	fmt.Fprintf(os.Stderr, "  debug     - 以调试模式在前台运行\n")
 }
 
 // installService 将程序安装为 Windows 服务

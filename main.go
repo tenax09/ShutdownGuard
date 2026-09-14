@@ -53,7 +53,7 @@ func main() {
 }
 
 func usage() {
-	fmt.Fprintf(os.Stderr, "自动关机服务（21:00 ~ 次日 11:00）\n\n")
+	fmt.Fprintf(os.Stderr, "自动关机服务（仅允许 17:00-20:00，其余时间关机）\n\n")
 	fmt.Fprintf(os.Stderr, "用法: %s <命令>\n\n", os.Args[0])
 	fmt.Fprintf(os.Stderr, "可用命令:\n")
 	fmt.Fprintf(os.Stderr, "  install   - 安装为 Windows 服务（开机自启）\n")

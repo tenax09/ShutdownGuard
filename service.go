@@ -44,15 +44,16 @@ func (s *shutdownService) Execute(args []string, r <-chan svc.ChangeRequest, cha
 }
 
 // shouldShutdown 综合判断是否需要关机
-// 规则：仅允许 17:00-20:00 使用，其余时间关机
+// 规则：仅允许 17:00-20:30 使用，其余时间关机
 func shouldShutdown() bool {
-	hour := time.Now().Hour()
-	return hour < 17 || hour >= 20
+	now := time.Now()
+	mins := now.Hour()*60 + now.Minute()
+	return mins < 17*60 || mins >= 20*60+30
 }
 
 // doShutdown 方案1：直接调用 shutdown 命令
 func doShutdown() {
-	cmd := exec.Command("shutdown", "/s", "/t", "60", "/c", "当前处于限制使用时间段（仅允许 17:00-20:00），电脑将在 60 秒后关机。")
+	cmd := exec.Command("shutdown", "/s", "/t", "60", "/c", "当前处于限制使用时间段（仅允许 17:00-20:30），电脑将在 60 秒后关机。")
 	cmd.Run()
 }
 

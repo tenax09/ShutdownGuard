@@ -1,4 +1,5 @@
 @echo off
+cd /d "%~dp0"
 echo 正在停止 ShutdownGuard 服务...
 ShutdownGuard.exe stop
 if %errorlevel% equ 0 (

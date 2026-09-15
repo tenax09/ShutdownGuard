@@ -1,4 +1,5 @@
 @echo off
+cd /d "%~dp0"
 echo 正在卸载 ShutdownGuard 服务...
 echo.
 ShutdownGuard.exe uninstall

@@ -1,25 +1,24 @@
 @echo off
-chcp 65001 > nul
-echo æ­£åœ¨å®‰è£… ShutdownGuard æœåŠ¡...
+echo ÕýÔÚ°²×° ShutdownGuard ·þÎñ...
 echo.
 ShutdownGuard.exe install
 if %errorlevel% equ 0 (
     echo.
-    echo âœ“ æœåŠ¡å·²æˆåŠŸå®‰è£…ï¼ˆå¼€æœºè‡ªå¯ï¼‰
+    echo [OK] ·þÎñÒÑ³É¹¦°²×°£¨¿ª»ú×ÔÆô£©
     echo.
-    echo å°†åœ¨ 3 ç§’åŽè‡ªåŠ¨å¯åŠ¨æœåŠ¡...
+    echo ½«ÔÚ 3 Ãëºó×Ô¶¯Æô¶¯·þÎñ...
     timeout /t 3 /nobreak
     echo.
-    echo æ­£åœ¨å¯åŠ¨æœåŠ¡...
+    echo ÕýÔÚÆô¶¯·þÎñ...
     ShutdownGuard.exe start
     echo.
-    echo âœ“ æœåŠ¡å·²å¯åŠ¨
+    echo [OK] ·þÎñÒÑÆô¶¯
 ) else (
     echo.
-    echo âœ— å®‰è£…å¤±è´¥ï¼Œè¯·ä»¥ç®¡ç†å‘˜èº«ä»½è¿è¡Œæ­¤è„šæœ¬
+    echo [X] °²×°Ê§°Ü£¬ÇëÒÔ¹ÜÀíÔ±Éí·ÝÔËÐÐ´Ë½Å±¾
     echo.
-    echo æ“ä½œæ–¹æ³•ï¼š
-    echo 1. å³é”®ç‚¹å‡»æ­¤è„šæœ¬
-    echo 2. é€‰æ‹© ä»¥ç®¡ç†å‘˜èº«ä»½è¿è¡Œ
+    echo ²Ù×÷·½·¨£º
+    echo 1. ÓÒ¼üµã»÷´Ë½Å±¾
+    echo 2. Ñ¡Ôñ ÒÔ¹ÜÀíÔ±Éí·ÝÔËÐÐ
 )
 pause

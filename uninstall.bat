@@ -1,17 +1,16 @@
 @echo off
-chcp 65001 > nul
-echo 正在卸载 ShutdownGuard 服务...
+echo ����ж�� ShutdownGuard ����...
 echo.
 ShutdownGuard.exe uninstall
 if %errorlevel% equ 0 (
     echo.
-    echo ✓ 服务已成功卸载
+    echo [OK] �����ѳɹ�ж��
 ) else (
     echo.
-    echo ✗ 卸载失败，请以管理员身份运行此脚本
+    echo [X] ж��ʧ�ܣ����Թ���Ա�������д˽ű�
     echo.
-    echo 操作方法：
-    echo 1. 右键点击此脚本
-    echo 2. 选择 以管理员身份运行
+    echo ����������
+    echo 1. �Ҽ�����˽ű�
+    echo 2. ѡ�� �Թ���Ա��������
 )
 pause
